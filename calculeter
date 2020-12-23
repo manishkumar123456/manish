@@ -1,0 +1,31 @@
+1   # calculeter
+#operaters
+
+def add(a,b,c):
+    result=a+b+c
+    print(result)
+def sub(a,b,c):
+    result=a-b-c
+    print(result)
+def mul(a,b,c):
+    result=a*b*c
+    print(result)
+def div(a,b):
+    result=a/b
+    print(result)
+
+a = int(input("enter first number:"))
+b = int(input("enter second number:"))
+c = int(input("enter third number:"))
+op=input("enter your operater:")
+
+if  op =="+":
+    add(a,b,c)
+elif  op=="-":
+    sub(a, b,c)
+elif  op=="*":
+    mul(a, b,c)
+elif  op=="/":
+    div(a, b)
+else:
+        print("invelid operater")
