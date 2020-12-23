@@ -1,0 +1,35 @@
+# manish
+4  # program to convert numeric digits into  words
+number=[" ","one","Two","Three","Four","Five","Six","Seven","Eight","Nine"]
+nty=[" "," ","twenty","thirty","forty","fifty","sixty","seventy","eightyty","ninnty"]
+tens=["ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","ninnteen"]
+n = int(input ("enter a number:"))
+if  n>99999:
+    print("cant solve for more then five digits:")
+else:
+    d=[0,0,0,0,0]
+    i=0
+    while n > 0:
+         d [i]=n%10
+         i+=1
+         n=n//10
+    num =" "
+    if d[4]!= 0:
+         if(d [4]== 1):
+             num+=tens[d[3]] + " Thousand "
+    else:
+        num+=nty[d[4]]+" " +number[d[3]] +  "Thousand"
+else:
+          if  d[3]!=0:
+                num+=number[d[3]]+ " Thousand "
+          if d[2]!= 0:
+                num += number[d[2]] + "hundred"
+          if d[1] != 0:
+            if d[1] == 1:
+                num += tens[d[0]]
+       else:
+              num+= nty[d[1]]+" "+ number[d[0]]
+         else:
+               if   d[0] !=0:
+                   num+= number[d[0]]
+           print(num)
